@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Pricing Table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Sono", sans-serif;
+        margin: 0;
+        background-color: #f0f2f5;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      .pricing-container{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        gap: 2rem;
+        flex: 1;
+      }
+      .plan-title{
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #2196F3;
+      }
+      .plan-price{
+        font-weight: bold;
+        font-size: 40px;
+        margin-bottom: 10px;
+        color: #2c3e50;
+      }
+      .pricing-plan{
+        background-color: #ffffff;
+        color: #2c3e50;
+        text-align: center;
+        border-radius: 15px;
+        flex: 1;
+        max-width: 400px;
+        padding: 30px;
+      }
+      .plan-button{
+        background-color: #4CAF50;
+        height: 40px;
+        border-radius: 25px;
+        color: white;
+        margin-bottom: 10px;
+        border: none;
+        padding: 0 25px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      .plan-features{
+        list-style: none;
+        padding: 0;
+        
+      }
+      .plan-features li{
+        margin-bottom: 20px;
+      }
+      .footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        letter-spacing: 1px;
+        border-top: 3px solid #2196F3;
+      }
+      .footer p{
+        margin: 0;
+        font-weight: 300;
+      }
+    
+
+      
+      
+      /* Large Screens (above 1024px) - Horizontal layout */
+      @media (min-width: 1025px) {
+        .pricing-container {
+          flex-direction: row;
+          height: 100vh;
+          gap: 2rem;
+        }
+        .pricing-plan {
+          max-width: 400px;
+          flex: 1;
+        }
+        .footer {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+        }
+      }
+      
+      /* Medium to Small Screens (1024px and below) - Vertical layout */
+      @media (max-width: 1024px) {
+        .pricing-container {
+          flex-direction: column;
+          height: auto;
+          min-height: calc(100vh - 80px);
+          gap: 1.5rem;
+          padding: 20px;
+        }
+        .pricing-plan {
+          max-width: 600px;
+          width: 100%;
+          padding: 25px;
+        }
+        .footer {
+          position: static;
+          margin-top: auto;
+        }
+      }
+      
+      /* Mobile Screens (below 768px) - Compact vertical layout */
+      @media (max-width: 767px) {
+        .pricing-container {
+          gap: 1rem;
+          padding: 15px;
+          min-height: calc(100vh - 60px);
+        }
+        .pricing-plan {
+          max-width: 100%;
+          padding: 20px;
+        }
+        .plan-price {
+          font-size: 2.2rem;
+          margin-bottom: 15px;
+          text-align: center;
+        }
+        .plan-title {
+          font-size: 1.5rem;
+          margin-bottom: 12px;
+          text-align: center;
+        }
+        .plan-features li {
+          font-size: 1.1rem;
+          margin-bottom: 16px;
+          text-align: center;
+        }
+        .plan-button {
+          font-size: 1.1rem;
+          height: 44px;
+          padding: 0 28px;
+          margin-top: 10px;
+          margin-bottom: 10px;
+        }
+        .footer {
+          padding: 16px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pricing-container">
+      <div class="pricing-plan">
+        <div class="plan-title">Basic</div>
+        <div class="plan-price">$9.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 10GB Storage</li>
+          <li>✅ 1 User</li>
+          <li>🚫 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Standard</div>
+        <div class="plan-price">$19.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 50GB Storage</li>
+          <li>✅ 5 Users</li>
+          <li>✅ Phone &amp; Email Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+      <div class="pricing-plan">
+        <div class="plan-title">Premium</div>
+        <div class="plan-price">$49.99/month</div>
+        <ul class="plan-features">
+          <li>✅ 100GB Storage</li>
+          <li>✅ 10 Users</li>
+          <li>✅ 24/7 Support</li>
+        </ul>
+        <button class="plan-button">Sign Up</button>
+      </div>
+    
+    </div>
+         <footer class="footer">
+      <p>Designed by Muheeb Bashir Baba</p>
+    </footer>
+    
+  </body>
+</html>
